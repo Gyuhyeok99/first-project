@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform&Transition</title>
+    <style>
+      /*transform 속성은 HTML 요소를 회전, 크기 조절, 기울이기, 이동 효과를 나타낼 때 사용
+        사용법은 transform 속성 값으로 특수한 함수를 넣어주기
+        transform: translateX(20px)
+                  translateY(40px)
+
+        transform: translate(20px, 40px);
+        but, 사용하려면 해당 요소의 dislay 속성 block 또는 inline-block이어야 함.
+
+        scale(sx, sy)
+        지정한 크기만큼 축과 y축으로 확대, 축소
+
+        rotate(각도)
+        지정한 각도만큼 회전함(+시계방향, -시게반대방향)
+
+        skew(ax, ay)
+        지정한 각도만큼 x축과 y축으로 왜곡
+        
+        Transition(전환) 속성 값이 변할 때 더욱 부드럽게 전환할 수 있도록 도와줌
+
+        transition-property 어떤 속성에 트랜지션 효과를 줄 것인지 지정
+          transitino-property: <속성1>, <속성2>;와 같이 지정 가능
+          all: 모든 속성 지정(생략 가능)
+          none: 아무것도 지정 
+        transition-duration 몇 초 동안 실행할 것인지 지정
+        transition-delay 지정한 초만큼 기다렸다가 실행할 때 사용
+        transition-timing-function 시작하면서 끝날 때의 타이밍 즉, 속도를 지정
+          linear - 시작과 끝의 속도가 일정
+          ease-in - 천천히 시작했다가 완료될 때 속도 증가
+          ease-out - 빨리 시작했다가 완료될 때 속도 감소 (그 외 MDN 사이트 참고)
+
+        transition: all(생략 가능) s(duration) s(delay) timing-function (단축속성)
+        */
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: lightgrey;
+      }
+      .outline,
+      .box {
+        width: 60px;
+        height: 60px;
+      }
+      .outline {
+        border: 3px solid yellow;
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+      .box {
+        background-color: blue;
+      }
+      .box1 {
+        transform: translate(20px, 20px);
+      }
+      .box2 {
+        transform: scale(2, 0.5);
+      }
+      .box3 {
+        transform: rotate(45deg);
+      }
+      /* .outline-box3 {
+        perspective: 50px;
+      } */
+      .box4 {
+        transform: skew(15deg, 20deg);
+      }
+      .box1 {
+        /*all이라고 하면 한 번에 다 설정*/
+        /* transition-property: width, height, background-color, transform; 
+        transition-duration: 2s;
+        transition-delay: 1s;
+        transition-timing-function: ease-out; */
+        transition: 2s 1s ease-in;
+      }
+      .box1:hover {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outline">
+      <div class="box box1"></div>
+    </div>
+    <div class="outline">
+      <div class="box box2"></div>
+    </div>
+    <div class="outline outline-box3">
+      <div class="box box3"></div>
+    </div>
+    <div class="outline">
+      <div class="box box4"></div>
+    </div>
+  </body>
+</html>

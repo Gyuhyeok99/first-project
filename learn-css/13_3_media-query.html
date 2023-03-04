@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+    <style>
+      /*
+    미디어 쿼리 문법
+    @media 키워드를 사용, 이때 그 특정 구간을 중단점(breakpoint)라고 함
+
+    기본형
+    @media[only | not] 미디어 유형 [and 조건] * [and 조건]
+      only: 미디어 쿼리를 지원하지 않는 웹 브라우저에서는 무시하고 실행 x(거의 사용 x)
+      not: not 다음에 지정하는 미디어 유형을 제외
+      and: 조건을 여러 개 연결해서 추가할 수 있음
+        ex) 미디어 유형이 screen이면서 최소 너비가 768px이고 최대 너비는 1439px일 경우에 적용할 css
+        @media screen and (min-width: 768px) and (max-width: 1439px)
+    
+    미디어 유형
+      all: 모든 장치에 적합
+      print: 인쇄 결과물 및 출력 미리보기 화면에 표시 중인 문서
+      screen: 주로 화면이 대상
+      speech: 음성 합성장치 대상
+    */
+
+      @media (max-width: 600px) {
+        body {
+          background-color: red;
+        }
+      }
+      @media (max-width: 400px) {
+        body {
+          background-color: blue;
+        }
+      }
+      @media (min-width: 601px) {
+        body {
+          background-color: yellow;
+        }
+      }
+
+      @media print {
+        h1 {
+          font-size: 120px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>안녕하세요</h1>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut odit harum
+      omnis voluptates! Quae debitis quam magni voluptatibus architecto error
+      accusantium, illum itaque sapiente quos? Dolores omnis tenetur repellat
+      cumque?
+    </p>
+  </body>
+</html>

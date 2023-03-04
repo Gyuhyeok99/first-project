@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox item</title>
+    <style>
+      /*  flex item - 자식 요소의 크기나 순서에 관련된 속성은 flex item에 정의
+
+        flex-grow - flex item의 너비에 대한 확대 인자를 지정. 기본값은 0. 음수값은 무효
+        flex-shrink - 축소 인자 지정. 기본값은 1. 음수값은 무효. 0을 지정하면 축소가 해제되어 원래 너비 유지
+
+        flex-basis - flex item의 너비 기본값은 px,%단위로 지정. 기본값은 auto.
+
+        flex grow, shrink, basis의 단축속성. 기본값 0 1 auto.(개별적으로 기술하는 것 추천)
+
+        order - flex item의 배치 순서를 지정. HTML 코드를 변경하지 않고 order 속성값을 지정하는 것으로 간단히 재배치 가능.
+                기본 배치 순서는 flex container에 추가된 순서. 기본값 0(자주 사용 x)
+
+        align-self
+    */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex-container {
+        background-color: green;
+        height: 100vh;
+        display: flex;
+      }
+      .flex-item {
+        color: white;
+        width: 80px;
+        height: 80px;
+        background-color: rgb(136, 71, 136);
+        text-align: center;
+        border: 1px solid yellow;
+      }
+      .item1 {
+        /* order: 4; */
+        /* flex-grow: 2;
+        flex-shrink: 2; */
+        /* flex-basis: 160px; */
+        align-self: flex-end;
+      }
+      .item2 {
+        order: 3;
+        /* flex-grow: 1;
+        flex-shrink: 1; */
+        align-self: center;
+      }
+      .item3 {
+        order: 2;
+        /* flex-grow: 1;
+        flex-shrink: 1; */
+      }
+      .item4 {
+        order: 1;
+        /* flex-grow: 1;
+        flex-shrink: 1; */
+      }
+      .item5 {
+        order: 0;
+        /* flex-grow: 1;
+        flex-shrink: 1; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item item1">1</div>
+      <div class="flex-item item2">2</div>
+      <div class="flex-item item3">3</div>
+      <div class="flex-item item4">4</div>
+      <div class="flex-item item5">5</div>
+    </div>
+  </body>
+</html>

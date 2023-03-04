@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model</title>
+    <style>
+      /*
+      Content - 텍스트나 이미지가 들어있는 HTML 요소의 실질적인 내용
+                width와 height로 변경(inline 레벨 요소에서는 사용 불가)
+      Padding - Content와 Border사이의 영역으로 쉽게 말해 안쪽 여백
+      Border - Content를 감싸는 테두리
+      Margin - 테두리와 이웃하는 요소 사이의 간격으로 쉽게 말해 바깥쪽 여백
+       */
+      div.content {
+        background-color: rgb(172, 172, 172);
+        width: 20vw;
+        height: 200px;
+        padding: 20px;
+        border: 10px solid green;
+        margin: 40px;
+      }
+      div.padding {
+        border: 1px solid black;
+        padding: 20px;
+      }
+      div.margin {
+        border: 1px solid red;
+        margin: 20px;
+      }
+      .shape {
+        border: 1px solid red;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+      }
+      span {
+        border: 1px solid red;
+        width: 100px;
+        height: 100px;
+        /*인라인 요소 블록 요소로 사용하는 법*/
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content"></div>
+    <span>Hello CSS</span>
+    <div class="padding">
+      남은 밥 또는 잘 익은 김치가 보통 김치볶음밥을 만들 때 재료로 사용된다.[2]
+      묵은지는 김치찌개에 사용한다.[1] 실제로 잘 발효된 김치와 밥보다 훨씬
+      풍부한 맛을 낼 수 있다. 준비하고 남은 김치소는 소금물을 버릴 수 있도록
+      짠다. 과정을 완료하지 않고 요리를 마치게 되면 밥의 질감이 죽처럼 변할 수
+      있다. 김치와 밥을 제외하고 많이 사용하는 식재료로는 햄, 소시지, 통조림
+      참치, 김, 마늘, 고추, 파, 계란 등이 있다.[2] 고기 대신 버섯으로도 대체할
+      수 있으며, 이 경우 버섯김치볶음밥 같은 식으로 부른다.
+    </div>
+    <div class="margin">
+      남은 밥 또는 잘 익은 김치가 보통 김치볶음밥을 만들 때 재료로 사용된다.[2]
+      묵은지는 김치찌개에 사용한다.[1] 실제로 잘 발효된 김치와 밥보다 훨씬
+      풍부한 맛을 낼 수 있다. 준비하고 남은 김치소는 소금물을 버릴 수 있도록
+      짠다. 과정을 완료하지 않고 요리를 마치게 되면 밥의 질감이 죽처럼 변할 수
+      있다. 김치와 밥을 제외하고 많이 사용하는 식재료로는 햄, 소시지, 통조림
+      참치, 김, 마늘, 고추, 파, 계란 등이 있다.[2] 고기 대신 버섯으로도 대체할
+      수 있으며, 이 경우 버섯김치볶음밥 같은 식으로 부른다.
+    </div>
+    <!-- 마진 중첩
+    HTML 요소를 세로로 배치할 경우 margin과 margin이 만날 때 margin 값이
+    큰 쪽으로 겹쳐지는 것, 가로는 상관 x -->
+    <div class="shape" style="margin-bottom: 40px"></div>
+    <div class="shape"></div>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float</title>
+    <style>
+      /* 
+    float '뜨다'라는 뜻
+          원래 흐름에서 벗어나 둥둥 떠다니듯 배치
+          그리하여 인접한 텍스트 또는 인라인 요소가 그 주위를 자연스럽게 감쌈
+          속성값 none - 기본값으로 요소 띄우지 않음
+                left - 왼쪽에 띄움
+                right - 오른쪽에 띄움
+                inherit - 부모 요소로부터 상속
+                initial - 기본값으로 설정
+                 */
+      /* 
+    clear '취소하다' float 값을 취소
+          clear: none; - 기본값
+          clear: left; - 왼쪽 취소
+          clear: right; - 오른쪽 취소
+          clear: both; - 왼쪽 오른쪽 둘다 취소
+           */
+      .container {
+        width: 600px;
+        border: 1px solid black;
+      }
+      img {
+        width: 200px;
+      }
+      .float-left {
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        height: 400px;
+      }
+      .float-right {
+        float: right;
+      }
+      p {
+        border: 1px solid blue;
+      }
+      .clear {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img class="float-left" src="../assets/images/wolf.jpg" alt="울프" />
+      <p>
+        늑대는 야생 갯과 동물 중 가장 크고 상징적인 동물이다. 지역에 따라 크기
+        차이가 크며, 보통 베르그만의 법칙에 의해 북부 지방의 늑대들이 남쪽의
+        늑대들에 비해 덩치가 큰 편이다. 러시아와 캐나다의 추운 지역의 늑대들은
+        30~60kg 정도로 어지간한 대형견 이상이지만, 남쪽의 아라비아늑대나
+        인도늑대 등은 20kg 정도로 매우 왜소하다.
+      </p>
+      <p class="clear">
+        늑대는 야생 갯과 동물 중 가장 크고 상징적인 동물이다. 지역에 따라 크기
+        차이가 크며, 보통 베르그만의 법칙에 의해 북부 지방의 늑대들이 남쪽의
+        늑대들에 비해 덩치가 큰 편이다. 러시아와 캐나다의 추운 지역의 늑대들은
+        30~60kg 정도로 어지간한 대형견 이상이지만, 남쪽의 아라비아늑대나
+        인도늑대 등은 20kg 정도로 매우 왜소하다.
+      </p>
+      <img class="float-right" src="../assets/tree.jpg" alt="나무" />
+      <p>
+        나무는 흔히 지구에서 가장 거대한 단일 생명체라고 알려져 있다. 일견 가장
+        큰 단일 생명체라는 Armillaria ostoyae라는 버섯은 단일 개체인지
+        불분명하거니와 무게는 605톤 정도밖에 안 되는 것으로 추정된다.
+      </p>
+    </div>
+  </body>
+</html>

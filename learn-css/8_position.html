@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <style>
+      /*position 속성은 HTML 요소를 배치하는 방법 지정
+      static(기본값) 
+      static은 요소가 HTML 문서에서 일반적인 흐름을 따라 배치가 되게 함, 기본값
+
+      relative
+      static과 마찬가지로 요소가 일반적인 흐름에 따라 배치되게 함
+      but, top right bottom left와 같은 속성에 의한 상대적인 위치에 배치
+
+      absolute
+      요소가 문서의 일반적인 흐름을 따르지 않게 함
+      position:stati 속성을 가지고 있지 않은 부모를 기준으로 움직임
+      부모 중에 포지션이 relative, absolute, fixed인 태그가 없으면 body 태그가 기준
+
+      fixed
+      absolute와 마찬가지로 요소가 문서의 일반적인 흐름에서 제거
+      but, 스크린의 뷰포트를 기준으로 한 위치에 배치
+      즉, 스크롤되어도 움직이지 않는 고정된 자리를 가짐
+
+      sticky
+      요소가 HTML 문서안에서 static과 같이 일반적인 흐름에 따라감
+      but, 스크롤 위치가 임계점에 이르면 fixed와 같이 박스를 화면에 고정할 수 있는 속성
+
+      관련 속성
+      z-index
+      어느 객체가 앞으로 나오고, 뒤에 나올지 배치 순서를 결정하는 속성
+      relative, absolue, fixed 속성이 적용된 요소에서만 작동
+      */
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      main,
+      section,
+      article,
+      div {
+        border: 1px solid black;
+        padding: 20px;
+      }
+      main {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: yellow;
+      }
+      section {
+        background-color: violet;
+        position: relative;
+      }
+      article {
+        background-color: cyan;
+      }
+      div {
+        background-color: white;
+      }
+      div.relative {
+        position: relative;
+        top: -150px;
+        right: 50px;
+        z-index: 1;
+      }
+      div.absolute {
+        position: absolute;
+        background-color: grey;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+      }
+      div.fixed {
+        position: fixed;
+        background-color: blue;
+        bottom: 30px;
+        right: 30px;
+        border-radius: 50%;
+      }
+      div.sticky {
+        position: sticky;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      main
+      <section>
+        section
+        <article>
+          article
+          <div>static</div>
+          <div class="relative">relative</div>
+          <div class="absolute">absolute</div>
+          <div class="fixed">fixed</div>
+          <div class="sticky">sticky</div>
+          <div style="height: 1000px"></div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

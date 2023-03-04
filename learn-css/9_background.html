@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background</title>
+    <style>
+      .red {
+        background-color: hwb(0 63% 15% / 0.329);
+        width: 200px;
+        height: 200px;
+      }
+      .image {
+        /*background: url('') no-repeat top right fixed;
+          단축 속성으로 많이 사용*/
+        background-image: url('../assets/images/office.jpg');
+        /* background-repeat: no-repeat; */
+        background-repeat: repeat;
+        /* background-position-x: center;
+        background-position-y: center; */
+        background-position: top right;
+        /* 
+        background-attachment 배경 이미지를 뷰포트 내에서 고정할지 말지를 지정하는 속성
+          scroll: 선택한 요소와 같이 움직임.
+                  내용을 스크롤하면 배경 이미지는 스크롤되지 않음.
+          fixed: 움직이지 않음
+          local: 선택한 요소와 같이 움직임.
+                  내용을 스크롤하면 배경 이미지도 스크롤됨.
+          initial: 기본값으로 설정
+          inherit: 부모 요소의 속성값을 상속받음.
+        */
+        width: 200px;
+        height: 400px;
+        border: 4px solid blue;
+        display: inline-block;
+        overflow-y: scroll;
+        /*overflow: hidden - 숨김*/
+      }
+      .attachment-scroll {
+        background-attachment: scroll;
+      }
+      .attachment-fixed {
+        background-attachment: fixed;
+      }
+      .attachment-local {
+        background-attachment: local;
+      }
+      .background-size {
+        width: 300px;
+        height: 100px;
+        background-image: url('../assets/images/iphone.jpg');
+        background-repeat: no-repeat;
+        /*
+        background-size - 요소 배경 이미지의 크기를 설정함.
+          contain - 이미지가 잘리거나 찌그러지지 않는 한도 내에서 제일 크게 설정.
+          cover - 이미지가 찌그러지지 않는 한도 내에서 제일 크게 설정.
+                  이미지의 가로세로비가 요소와 다르다면 이미지를 세로 또는 가로방향으로 잘라내어 빈 공간 생기지 않게 함.
+                  (많이 사용)
+          auto - 배경 이미지의 원본 크기를 유지.
+          <length> - 원본 크기의 너비/높이를 주어진 값으로 늘리거나 줄임. 음수 x
+          <percentange> - 배경 위치 지정 영역의 지정된 백분율에 해당하는 크기로 이미지를 늘림.
+        */
+        background-size: cover;
+        background-position: center;
+        border: 1px solid black;
+      }
+      .linear-gradient {
+        width: 500px;
+        height: 200px;
+        border: 1px solid red;
+        background: linear-gradient(to right, red 50%, blue 80%, yellow);
+      }
+      .radial-gradient {
+        width: 500px;
+        height: 200px;
+        border: 1px solid blue;
+        background: radial-gradient(
+          circle at 10% 50%,
+          white,
+          yellow,
+          red,
+          blue
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <h3>background-color</h3>
+    <div class="red"></div>
+
+    <h3>background-image</h3>
+    <div class="image attachment-scroll">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+      deserunt magni suscipit delectus tempore repellendus ex, dignissimos at
+      velit a quod in illum earum ab, sapiente optio, sed alias expedita! Sint
+      minus omnis ea reiciendis, quidem recusandae voluptatem, quibusdam facilis
+      laudantium ab quae nulla nobis amet quis dolore incidunt dolorum officiis
+      eum mollitia, sapiente aliquid eligendi labore vero. Blanditiis, eveniet!
+      Recusandae quia asperiores quam inventore corrupti nemo magni impedit
+      maxime vel est quisquam suscipit accusamus eaque, voluptatum pariatur
+      veniam iste quaerat sint possimus sequi laborum, reprehenderit sapiente
+      in! Dolorum, minus? Esse reprehenderit fugiat ducimus, inventore earum
+      perferendis fugit. Sequi cupiditate quos est quasi voluptates eaque
+      deleniti, suscipit velit impedit non in aspernatur quia recusandae
+      obcaecati! Eligendi dicta maxime asperiores recusandae. Quaerat, veniam
+      beatae? Nulla quia eaque maiores, corrupti fugiat sed cum, voluptatem
+      tempora repudiandae architecto molestias voluptatibus in sint nemo. Sint
+      ex dolore laudantium nostrum. Quidem illo laboriosam vitae perferendis!
+      Maiores praesentium quae magni animi iure doloribus eum veritatis fugiat
+      eius aspernatur laborum ratione voluptas, perferendis odit illo et, libero
+      officia numquam quia beatae blanditiis optio! Ipsum veniam laudantium
+      tempore. Quasi eos vitae id necessitatibus velit inventore tempora odit
+      consequuntur dolore amet vero exercitationem laboriosam quis, esse fugit
+      dicta deserunt sed quae maxime sunt, consequatur aut quibusdam dolor!
+      Ipsa, ducimus! Cumque veniam ad dignissimos odit provident consequuntur
+      maiores, reprehenderit modi dolorem dicta fuga vitae quisquam illo quam
+      tempora facilis in tempore alias laboriosam, odio velit omnis explicabo?
+      Doloribus, molestiae quisquam!
+    </div>
+    <div class="image attachment-fixed">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil eaque
+      placeat necessitatibus impedit aut sequi voluptas, sit ipsa ex
+      perspiciatis laudantium et ut nostrum maiores eum quibusdam iste iusto
+      recusandae! Est nostrum laboriosam facere quo hic sapiente veritatis
+      aspernatur at suscipit corporis. Quaerat dicta magnam cum, sint ipsa
+      repellat! Exercitationem, commodi dolorum. Voluptatum eum quis incidunt
+      veritatis error, sed repudiandae. Ut optio animi neque, culpa ipsa vel, ad
+      accusamus asperiores porro iste facere maxime incidunt laboriosam, cumque
+      at sint ab ullam quis atque ratione magnam eaque minima tempora voluptate.
+      Minus. Placeat vitae porro facilis eius eum inventore, explicabo nobis ab
+      earum, ratione illo nesciunt! Inventore deleniti maxime vel eius esse rem
+      quam est aspernatur officia eum dignissimos, voluptatibus aperiam
+      corrupti. Dolores eligendi laborum, nam iure perferendis exercitationem
+      est illum sequi blanditiis tempora cumque sunt! Maxime perferendis minus
+      qui voluptatum veniam incidunt architecto, voluptates voluptatem eius ex,
+      totam iure ducimus obcaecati. Eligendi neque officia obcaecati! Quia alias
+      iure, inventore eveniet officiis hic tenetur. Maiores reprehenderit eum
+      eius fugit porro reiciendis, quasi asperiores adipisci. Ratione, est unde
+      iure vitae veniam quos culpa? Perferendis dolorum molestiae quibusdam
+      veniam, quidem quas dicta, voluptate aperiam natus ad sint! Nesciunt
+      perspiciatis quos vero cupiditate placeat laborum nobis doloribus odit,
+      modi officiis reiciendis maxime aut animi odio. Beatae adipisci fugiat
+      dolorum provident, nulla suscipit. Illo libero mollitia temporibus,
+      tenetur eum eos laboriosam odit accusamus animi sequi eaque distinctio non
+      eius, porro ex atque vero at dicta. A.
+    </div>
+    <div class="image attachment-local">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex quisquam
+      assumenda facere vitae hic harum eaque corporis esse necessitatibus
+      asperiores, ab itaque adipisci perferendis similique recusandae architecto
+      tenetur ea molestias. Vitae eligendi fugiat atque molestiae consectetur
+      quam dignissimos sapiente! Recusandae nesciunt assumenda a eius? Excepturi
+      harum rem quia similique vitae ad ipsa a neque molestias voluptas,
+      repellat exercitationem adipisci hic. Quod voluptate non, ab officiis
+      quisquam perferendis ut incidunt illum voluptatum placeat a at illo eum.
+      Tempora repudiandae, iste nisi laborum corrupti unde deleniti velit vitae
+      expedita ducimus? Inventore, qui. Minima harum, laborum dolorem itaque,
+      magnam nisi nobis unde ipsum recusandae mollitia molestias repellat
+      debitis labore veniam voluptates? Aut accusamus quo harum laborum autem
+      earum perspiciatis! Unde accusamus quasi distinctio. Est, similique.
+      Excepturi debitis sapiente alias beatae ducimus exercitationem, eum unde
+      quod omnis placeat dolorum incidunt culpa quae consequuntur sit magni
+      dolores eligendi delectus accusamus fuga minus saepe dignissimos quis! Ea
+      deserunt cum ipsum, quasi doloremque fuga quisquam necessitatibus magni ut
+      dolorum earum ad corrupti, neque explicabo distinctio quam ab quae nisi?
+      Facere obcaecati ipsam qui magni, cum tempore sed. Aliquam libero natus
+      excepturi optio neque soluta dolorum, ex molestiae sapiente ipsa, quis
+      adipisci iusto eligendi repellat. Iure ullam nam, suscipit cupiditate
+      voluptatibus magni alias vero quibusdam sequi in impedit. Non, doloremque
+      officiis! Repellat rem, praesentium, officia aut sit harum, dicta sunt
+      voluptate aspernatur itaque excepturi? Modi, accusantium? Modi sunt
+      eveniet, aperiam deleniti ratione id delectus officia tempore beatae
+      explicabo!
+    </div>
+    <h3>background-size</h3>
+    <div class="background-size"></div>
+    <h3>linear-gradient</h3>
+    <div class="linear-gradient"></div>
+    <h3>radial-gradient</h3>
+    <div class="radial-gradient"></div>
+    <div style="height: 1000px; width: 10px; background-color: red"></div>
+  </body>
+</html>
